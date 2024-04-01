@@ -11,7 +11,7 @@ internal class not1
          */
         //Ekrana çıktı alma yöntemi
         //Console.WriteLine();-->çıktıları alt alta yazmamızı sağlar.
-        //Console.WriteLine();--> Çıktıları yan yana yazmamızı sağlar.
+        //Console.Write();--> Çıktıları yan yana yazmamızı sağlar.
         //Console.WriteLine("Gün");
         //Console.WriteLine("Tek");
         //Console.Write("Gün");
