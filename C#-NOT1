@@ -1,0 +1,62 @@
+using System;
+
+internal class not1
+{
+    public static void Main(string[] args)
+    {
+        //Kütüphaneler>sınıf>metot/fonksiyon>algoritmalar
+        /*
+          Main metodu,programı çalıştırırken işletim sistemi 
+          ile iletişim kuran ana yapımızıdır
+         */
+        //Ekrana çıktı alma yöntemi
+        //Console.WriteLine();-->çıktıları alt alta yazmamızı sağlar.
+        //Console.WriteLine();--> Çıktıları yan yana yazmamızı sağlar.
+        //Console.WriteLine("Gün");
+        //Console.WriteLine("Tek");
+        //Console.Write("Gün");
+        //Console.Write("Tek");
+        //Değişeknler.verileri sakladığımız yaplardır.Çeşitli türleri vardır
+        //string,int,short,byte,long,decimal,true,char,boolean
+        //stringle metinsel verileri saklarız.
+        //string yazilimciAdi = "Tekay";
+        //Console.WriteLine(yazilimciAdi);
+        // Matematiksel ifadeler iki yolla saklanır biri tam sayı biri ondalıklı sayı olarak.
+        //Tam sayı-->byte,short,int,long
+        //Noktalı sayi-->float,double,decimal.
+        //Bu tarz değişkenlerin aldıkları değerlerin aralıkları farklıdır.
+        //Örneğin byte türü 0-255
+        //short -32.00 - +32.00
+        //integer -2 milyarla +2 milyar arası
+        //Kapladıkları alana göre verileri değişkenlerin içine yerleştiririz.
+        //byte türü bellekte 1 byte alan kaplarken integer türü 4 bytlık değer alır.
+        //byte birinciTamSayi = 5;
+        //short ikinciTamSayi = 25;
+        //int ucuncuTamSayi = 250;
+        //long dorduncuTamSayi = 25000;
+
+        //float birinciNoktaliSayi = 1.1f;
+        //double ikinciNoktaliSayi = 5.5;
+        //decimal ucuncuNoktaliSayi = 10.6m;
+
+        //char -> Icerisinde karakter turunden verileri saklariz. 
+        //char boslukKarakteri = ' ';
+        //char sKarakteri = 's';
+
+        //boolean -> Icerisinde sadece iki veriyi saklayabilir. Bu veriler 'true' ya da 'false' verileridir.
+        // Ozellikle conditional durumlarda cokca kullanilan bir degisken turudur.
+        //bool dogruMu = true;
+        //Değikenler kendi içerisinde 2 ye ayrılır:
+        //1-)Değer tipli-->byte,short,integer,decimal,float,double,long,char,boolean,enım,struct
+        //2-)Referans tipli-->Diziler,sınıf,object,interface,abstract,class,record
+        //Ram-->stack,heap,static
+        //Stack bölge-->Değer tipli davranış gösteren  yapıların kendileri,değer tipli davranış gösteren yapıların değerlerini ve referans tipli davranışların 
+        //kendilerini saklat
+        //Heap-->referans tipli davranış gösteren değerlerin değerleric burda saklanır.
+        //Biz yazılımncılar stack bölgeye erişiriz fakat  heap bölgeye erişemeyiz.Heap bölgedeki değişkenin değerini stack bölgede  oluşturduğıumuz türler dolayısıyla doğrudan erişitiz.
+        
+
+
+
+    }
+}
