@@ -4,7 +4,7 @@ internal class not2
 {
     public static void Main(string[] arrgs)
     {
-        //Kopyalam davranışları=Deep Copy-shallow Copy
+        //Kopyalama davranışları=Deep Copy-shallow Copy
         //Deep copy-->Değer tipli davranış gösteren yapılarda kullanılır
         //Önemli olan verinin kendisidir değeri değildir.
         //Shallow Copy-->Referans tipli davranış gösteren yapılarda kullanılır.
