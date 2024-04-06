@@ -1,0 +1,187 @@
+using System;
+
+internal class not2
+{
+    public static void Main(string[] arrgs)
+    {
+        //Kopyalam davranışları=Deep Copy-shallow Copy
+        //Deep copy-->Değer tipli davranış gösteren yapılarda kullanılır
+        //Önemli olan verinin kendisidir değeri değildir.
+        //Shallow Copy-->Referans tipli davranış gösteren yapılarda kullanılır.
+        //Bu türk kopyalama davranışlarından önemli olan kopyalanacak değeri
+        //İçinde barındıran değişkendir.Değer çoğalmaz.
+        //Deep Copy
+        /*
+        int a = 5;
+        int b = a;
+        a = 25;
+        b = 30;
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        */
+        //Shallow copy
+        /*
+        int a = 5;
+        ref int b = ref  a;//burda "b"  "a" değişkenine referans olarak atanır.
+        //Bu b ve a nın bellekte aynı yeri gösterdiğini ifade eder.Yani b ye yapılan herhangi bir değişkil
+        //aslında a ya da yansır
+        a = 25;
+        b = 30;
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        */
+        // Tür dönüşümleri-->Bilinçsiz ve bilinçli olarak ikiye ayrılır
+        //Küçük tür 
+        /*
+          byte a=3;
+          int b=(int)a
+          Console.WriteLine(b);
+         */
+        //Büyük tür
+        /*
+         int a=25;
+         byte b=(byte)a;
+         Console.WriteLine(b);
+         */
+        //İnteger-->String
+        /*
+        int a = 10;
+        string b = a.ToString();
+        Console.WriteLine(b);
+        */
+        //String-->İnteger
+        /*
+        string a = "160";
+        int b = Convert.ToInt32(a);
+        int c=int.Parse(a);
+        Console.WriteLine(b);
+        Console.WriteLine(c);
+        */
+        /*
+         Object tüm türlerin atasıdır.Diğer türler ondan türemiştir.
+         Farklı türden olan verilerimi saklayabilirim
+         refrans tipli davranış gösterir.
+         
+        object a1 = "Ceren";
+        object a2 = "Tekay";
+        object a3 = "c";
+        object a4 = true;
+        */
+        
+        //Object türünün dahil olduğu iki tür dönüşümü vardır.Boxing ve Unboxing
+        //boxing-->Kendi öz türündeki veriyi object türündeki bir yapıya
+        //Özünde boxing işlemi bilinçsiz bir tür dönüşümüdür.
+        //int a = 10;
+        //object b1 = a;
+        //Unboxing,bilinçli bir tür dönüşümüdür.Cast operatörü ile gerçkeleştirilir bu dönüşüm
+        /*
+        object a = 123;
+        int b = (int)a;
+        Console.WriteLine(b+5);
+        */
+        
+        //İnput/Girdi işlemleri
+        /*
+        Console.Write("Lütfen bir sayı giriniz:");
+        int sayi1 = int.Parse(Console.ReadLine());
+        Console.WriteLine(sayi1);
+        */
+        //int sayi1 = 23;
+        //int sayi2 = 3;
+
+        //Console.WriteLine(sayi1 + sayi2);
+        //Console.WriteLine(sayi1 - sayi2);
+        //Console.WriteLine(sayi1 * sayi2);
+        //Console.WriteLine(sayi1 / sayi2);
+        //Console.WriteLine(sayi1 % sayi2);
+
+        //int toplam = sayi1 + sayi2;
+        //Console.WriteLine(toplam);
+
+        //int sayi1 = 5;
+        //double sayi2 = 10.9;
+        //Console.WriteLine(sayi1 + sayi2);
+
+        //+ operatorunun string turundeki veriler ile kullanimi
+        //Birlestirme islemi gerceklestirir.
+        //string metin1 = "unity";
+        //string metin2 = "verse";
+        //Console.WriteLine(metin1 + metin2);
+
+        //int yil = 2024;
+        //Console.WriteLine(metin1 + yil);
+
+        //Console.WriteLine("unityverse");
+        //int yil = 2024;
+        //Console.WriteLine(yil);
+
+        //Console.WriteLine("unityverse" + yil); //!!!Performanssiz
+        //Console.WriteLine($"unityverse{yil}"); //String Interpolation. Performansli.
+
+        //Karsilastirma Operatorleri
+        //<, >, <=, >=, ==, !=
+        //Bu operatorlerin kullanimi sonucunda boolean turunde degerler elde ederiz.
+
+        //int sayi1 = 10;
+        //int sayi2 = 20;
+
+        //Console.WriteLine(sayi1 < sayi2);
+        //Console.WriteLine(sayi1 > sayi2);
+        //Console.WriteLine(sayi1 <= sayi2);
+        //Console.WriteLine(sayi1 >= sayi2);
+        //Console.WriteLine(sayi1 == sayi2);
+        //Console.WriteLine(sayi1 != sayi2);
+
+        //Mantiksal Operatorler
+        //Birden fazla birbiriyle baglantili olan durumu karsilastirmamizi saglayan operatorlerdir.
+        //Ve(&&) Operatoru, Veya(||) Operatoru, Ya da(^) Operatoru
+        //Bu tarz operatorlerin kullanildigi yerlerde bize sonuc boolean turunde doner.
+
+        //Ve operatoru ile yaptiginiz bir islemin sonucunun TRUE olarak donebilmesi icin, kontrol edilen sartlardan veya karsilastirmalardan HEPSININ SONUCLARI TRUE olarak gelmelidir.
+        //Veya operatoru ile yaptiginiz bir islemin sonucunun TRUE olarak donebilmesi icin, kontrol edilen sartlardan veya karsilastirmalardan EN AZINDAN BIRININ TRUE donmesi gerekmektedir.
+        //Ya da operatoru ile yaptiginiz bir islemin sonucunun TRUE olarak donebilmesi icin, kontrol edilen sartlardan veya karsilastirmalardan YALNIZCA BIR TANESININ SONUCU TRUE olarak donmek zorundadir.
+
+        //int sayi1 = 10;
+        //int sayi2 = 20;
+        //int sayi3 = 30;
+
+        //Console.WriteLine(sayi1 > sayi2 && sayi2 == sayi3);
+        //Console.WriteLine(sayi1 > sayi2 || sayi2 == sayi3);
+        //Console.WriteLine(sayi1 > sayi2 ^ sayi2 == sayi3);
+
+        //Kosul-Sart-Durum
+        //If-Else ve Switch-Case
+
+        //If-Else
+        //Tekli kosul sorgulamasi.
+        //if (kosul_sart_durum)
+        //{
+        //    Sorguladigimiz kosul_sart_durum dogru ise buradaki kod bloklari calisacaktir.
+        //}
+        //else
+        //{
+        //    Sorguladigimiz kosul_sart_durum yanlis ise buradaki kod bloklari calisacaktir.
+        //}
+
+        //Kullanicidan aldigimiz sayisal deger 100'den buyuk veya esit ise girilen sayi degeri 100'den buyuk ve esittir, degilse girilen sayi degeri 100'den kucuktur seklinde ekrana cikti yazdiran bir program tasaralayalim.
+
+        Console.Write("Lutfen sayisal bir deger giriniz: ");
+        int sayi = int.Parse(Console.ReadLine());
+        if(sayi >= 100)
+        {
+            Console.WriteLine($"{sayi} sayisi 100 sayisindan buyuk veya esittir.");
+        }
+        else
+        {
+            Console.WriteLine($"{sayi} sayisi 100 sayisindan kucuktur.");
+        }
+        
+
+    }
+
+}
+
+class MyClass
+{
+    public int a;
+}
