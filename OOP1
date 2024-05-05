@@ -1,0 +1,153 @@
+using System;
+namespace OOP3tekrar // tüm her şey 
+{
+
+    class GeometrikSekil
+    {
+         protected double alan;
+        protected double cevre;
+
+        public void AlanGöster()
+        {
+            Console.WriteLine($"şeklin alanı:{alan}");
+        }
+
+        public void CevreGöster()
+        {
+            Console.WriteLine($"şeklin çevresi:{cevre}");
+        }
+        
+    }
+    
+    class kare:GeometrikSekil
+    {
+        public double kenar_uzunluk;
+        // private double alan;
+        // private double cevre;
+        
+        public void AlanHesapla()
+        {
+            {
+                alan = kenar_uzunluk * kenar_uzunluk;
+                Console.WriteLine(alan);
+            } 
+        }
+
+        public void CevreHesapla()
+        {
+             cevre = kenar_uzunluk * 4;
+            Console.WriteLine(cevre);
+        }
+    }
+    class dikdörtfen: GeometrikSekil
+    {
+         public double kısa_kenar_uzunluk ;
+         public double uzun_kenar_uzunluk;
+        public void AlanHesapla()
+        {
+            {
+                 alan = kısa_kenar_uzunluk * uzun_kenar_uzunluk;
+                Console.WriteLine(alan);
+            } 
+        }
+
+        public void CevreHesapla()
+        {
+             cevre = 2 * (kısa_kenar_uzunluk + uzun_kenar_uzunluk);
+            Console.WriteLine(cevre);
+        }
+    } 
+    
+    class  Myveri 
+    {
+        private int my_int;
+        private string my_string;
+        private bool my_bool;
+
+        public void BilgileriGoruntule()
+        {
+            Console.WriteLine(my_string);
+            Console.WriteLine(my_int);
+            Console.WriteLine(my_bool);
+        }
+        
+    }
+
+    class Matematik
+    {
+        public void Toplama(int ilk_sayi, int ikinci_sayi)
+        {
+            int toplam = ikinci_sayi + ilk_sayi;
+            Console.WriteLine(toplam);
+
+        }
+        public int Cıkarma (int ilk_sayi, int ikinci_sayi)
+        {
+            int fark = ikinci_sayi - ilk_sayi;
+            return fark;
+            
+
+        }
+
+    }
+    
+    internal class Program// classın imzası:Program
+    {
+        
+        public static void Main(string[] args)
+        {
+
+            // int kk; // declaration / ilan etme
+            // kk = 55; // ilan etme / assigment-->Atama
+            // Console.WriteLine(kk); // okuma / read
+            // Myveri myveri_0 = new Myveri();//initialize-->Başlatma / nesne oluşturma
+            // myveri_0.BilgileriGoruntule();
+            // Matematik mat_0 = new Matematik(); 
+            // mat_0.Toplama(12,24);
+            // int sayi1 = 10;
+            // int sayi2 = 5;
+            // int sonuc = mat_0.Cıkarma(sayi1,sayi2);
+            // Console.WriteLine(sonuc);
+            // kare your_kare = new kare();
+            // kare.kenar_uzunluk = 12;
+            // kare.AlanHesapla();
+            // kare.CevreHesapla();
+            // kare his_kare = new kare();
+            // kare.kenar_uzunluk = 9;
+            // kare.AlanHesapla();
+            // kare.CevreHesapla();
+            // kare her_kare = new kare();
+            // kare.kenar_uzunluk = 13;
+            // kare.AlanHesapla();
+            // kare.CevreHesapla();
+            // kare kare = new kare();
+            // kare.kenar_uzunluk = 5;
+            // kare.AlanHesapla();
+            // kare.CevreHesapla();
+            //
+            // dikdörtfen dikdörtgen_0 = new dikdörtfen();
+            // dikdörtgen_0.kısa_kenar_uzunluk = 10;
+            // dikdörtgen_0.uzun_kenar_uzunluk = 20;
+            //
+            // dikdörtgen_0.AlanHesapla();
+            // dikdörtgen_0.CevreHesapla();
+            //
+            // kare.AlanGöster();
+            // kare.CevreHesapla();
+            //
+            // dikdörtgen_0.AlanGöster();
+            // dikdörtgen_0.CevreGöster();
+
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
