@@ -1,0 +1,135 @@
+using System;
+namespace OOP4_TEKRAR
+{
+    
+    // private <-- protected <--internal <-- public
+    // Constructer
+    class Employee
+    {
+       public Employee(string param_name,string param_position,int para_mass)
+       {
+           name = param_name;
+           position = param_position;
+           mass = para_mass;
+       }
+
+        public string name;
+        public string position;
+        public int mass;
+
+        public void BilgileriGoruntule()
+        {
+            Console.WriteLine("Name :"+name);
+            Console.WriteLine("pozisyon"+ position);
+            Console.WriteLine("maaş:" + mass);
+        }
+        
+    }
+    
+    class Animal
+    {
+        protected string ses;
+        public virtual void MakeSound()
+        {
+            
+        }
+
+    }
+
+    class Lion : Animal
+    {
+        Lion() //Kurucu metotta dönüş tipi belirlenmez.Başlangıç değerlerini oluşturmamız için kullanılır.
+        {
+            
+        }
+        public override void MakeSound()
+        {
+            Console.WriteLine("ROAAAAARRRR");
+        }
+
+        public int Metod(int ilk_parametre)
+        {
+            return 0;
+        }
+    }
+    class Elephant : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("FİUUUUU");
+        }
+    }
+    
+    class MyType
+    {
+        internal int ilk_deger;
+        internal string name; 
+    }
+
+    class GeometrikSekil
+    {
+      protected int alan;
+      protected int cevre;
+
+      public virtual void CevreHesapla()
+      {
+          
+      }
+      public virtual void AlanHesapla()
+      {
+          
+      }
+    }
+
+    class kare:  GeometrikSekil
+    {
+         public override void CevreHesapla()
+          {
+              Console.WriteLine("kare");
+         }
+        public override void AlanHesapla()
+        {
+            
+        }
+
+    }
+    class Dikdörtegen:GeometrikSekil
+    {
+          public override void CevreHesapla()
+          {
+             Console.WriteLine("dikdörtgen");
+          }
+
+         public override void AlanHesapla()
+         {
+            
+         }
+
+    }
+    
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            // GeometrikSekil gg = new kare();
+            // kare kk = new kare();
+            // Dikdörtegen dd = new Dikdörtegen();
+            // gg.CevreHesapla();
+            // kk.CevreHesapla();
+            // dd.CevreHesapla();
+            // Animal anml_0 = new Animal();
+             // Lion lion_0 = new Lion();
+             // Elephant elpht_0 = new Elephant();
+             // lion_0.MakeSound();
+             // elpht_0.MakeSound();
+             // lion_0.Metod(0);
+             // Employee tekay = new Employee("Tekay","developer",34000);
+             // Employee Aysun = new Employee("Aysun", "Menager", 60000);
+             // tekay.BilgileriGoruntule();
+             // Aysun.BilgileriGoruntule();
+             
+
+
+        }
+    }
+}
